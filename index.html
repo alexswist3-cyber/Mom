@@ -2,131 +2,197 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Flight Itinerary — Toronto to Almaty</title>
+  <title>Global Air Travel — Flight Itinerary</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background-color: #f4f6f8;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, #eef3f8, #f7f9fc);
       margin: 0;
-      padding: 0;
-      color: #222;
+      color: #1b1f24;
     }
     .container {
-      max-width: 720px;
-      margin: 40px auto;
+      max-width: 760px;
+      margin: 32px auto;
       background: #ffffff;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-radius: 14px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.12);
       overflow: hidden;
     }
-    .header {
-      background: #0b3c5d;
-      color: #ffffff;
-      padding: 20px 24px;
+    .brand {
+      background: linear-gradient(135deg, #0b3c5d, #0e5a8a);
+      color: #fff;
+      padding: 22px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .header h1 {
+    .brand h1 {
       margin: 0;
-      font-size: 20px;
-      font-weight: normal;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: .2px;
     }
-    .header p {
-      margin: 6px 0 0;
-      font-size: 14px;
-      opacity: 0.9;
-    }
-    .section {
-      padding: 20px 24px;
-      border-bottom: 1px solid #e6e6e6;
-    }
-    .section:last-child {
-      border-bottom: none;
-    }
-    .label {
-      color: #666;
+    .brand .tag {
+      opacity: .9;
       font-size: 13px;
     }
-    .value {
+    .hero {
+      padding: 18px 26px;
+      background: #f1f6fb;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      border-bottom: 1px solid #e5edf5;
+    }
+    .pill {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 14px 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,.08);
+    }
+    .pill .label {
+      color: #5f6b7a;
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+    .pill .value {
       font-size: 15px;
-      margin-bottom: 10px;
+      font-weight: 600;
     }
-    .flight {
-      margin-top: 16px;
+    .section {
+      padding: 22px 26px;
+      border-bottom: 1px solid #eef2f7;
     }
-    .flight h3 {
-      margin: 0 0 8px;
-      font-size: 16px;
+    .section:last-child { border-bottom: none; }
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 18px;
       color: #0b3c5d;
     }
-    .row {
+    .flight {
+      border: 1px solid #e6edf5;
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 14px;
+    }
+    .flight:last-child { margin-bottom: 0; }
+    .flight .top {
       display: flex;
       justify-content: space-between;
-      font-size: 14px;
-      margin: 4px 0;
+      align-items: center;
+      margin-bottom: 10px;
     }
-    .footer {
-      padding: 16px 24px;
+    .flight .route {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .flight .code {
+      font-size: 13px;
+      color: #4b5a6a;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      font-size: 13px;
+    }
+    .grid div span {
+      display: block;
+      color: #6a7786;
       font-size: 12px;
-      color: #777;
-      background: #fafafa;
+      margin-bottom: 2px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .summary { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <div class="header">
-      <h1>Your Flight Itinerary</h1>
-      <p>Toronto → Almaty | 29 February</p>
+    <div class="brand">
+      <h1>Global Air Travel</h1>
+      <div class="tag">Flight Itinerary • 29 February</div>
+    </div>
+
+    <div class="hero">
+      <div class="pill">
+        <div class="label">Passenger</div>
+        <div class="value">Daniil Khil</div>
+      </div>
+      <div class="pill">
+        <div class="label">Booking Reference</div>
+        <div class="value">GAT7Q9</div>
+      </div>
+      <div class="pill">
+        <div class="label">Travel Class</div>
+        <div class="value">Economy</div>
+      </div>
     </div>
 
     <div class="section">
-      <div class="label">Passenger Name</div>
-      <div class="value">Daniil Khil</div>
+      <h2>Flight Details</h2>
 
-      <div class="label">Travel Class</div>
-      <div class="value">Economy</div>
+      <div class="flight">
+        <div class="top">
+          <div class="route">Toronto (YYZ) → Amsterdam (AMS)</div>
+          <div class="code">Flight GA 842</div>
+        </div>
+        <div class="grid">
+          <div><span>Departure</span>05:05</div>
+          <div><span>Arrival</span>18:20</div>
+          <div><span>Duration</span>7h 15m</div>
+          <div><span>Aircraft</span>B787</div>
+        </div>
+      </div>
 
-      <div class="label">Itinerary Status</div>
-      <div class="value">Scheduled</div>
-    </div>
+      <div class="flight">
+        <div class="top">
+          <div class="route">Amsterdam (AMS) → Istanbul (IST)</div>
+          <div class="code">Flight GA 219</div>
+        </div>
+        <div class="grid">
+          <div><span>Departure</span>20:30</div>
+          <div><span>Arrival</span>01:55 (+1)</div>
+          <div><span>Duration</span>3h 25m</div>
+          <div><span>Aircraft</span>A321</div>
+        </div>
+      </div>
 
-    <div class="section flight">
-      <h3>Flight 1</h3>
-      <div class="row"><span>Route</span><span>Toronto (YYZ) → Amsterdam (AMS)</span></div>
-      <div class="row"><span>Departure</span><span>05:05</span></div>
-      <div class="row"><span>Arrival</span><span>18:20</span></div>
-      <div class="row"><span>Flight Time</span><span>7h 15m</span></div>
-      <div class="row"><span>Layover</span><span>2h 10m</span></div>
-    </div>
-
-    <div class="section flight">
-      <h3>Flight 2</h3>
-      <div class="row"><span>Route</span><span>Amsterdam (AMS) → Istanbul (IST)</span></div>
-      <div class="row"><span>Departure</span><span>20:30</span></div>
-      <div class="row"><span>Arrival</span><span>01:55 (+1 day)</span></div>
-      <div class="row"><span>Flight Time</span><span>3h 25m</span></div>
-      <div class="row"><span>Layover</span><span>3h 05m</span></div>
-    </div>
-
-    <div class="section flight">
-      <h3>Flight 3</h3>
-      <div class="row"><span>Route</span><span>Istanbul (IST) → Almaty (ALA)</span></div>
-      <div class="row"><span>Departure</span><span>05:00</span></div>
-      <div class="row"><span>Arrival</span><span>13:40</span></div>
-      <div class="row"><span>Flight Time</span><span>4h 40m</span></div>
+      <div class="flight">
+        <div class="top">
+          <div class="route">Istanbul (IST) → Almaty (ALA)</div>
+          <div class="code">Flight GA 603</div>
+        </div>
+        <div class="grid">
+          <div><span>Departure</span>05:00</div>
+          <div><span>Arrival</span>13:40</div>
+          <div><span>Duration</span>4h 40m</div>
+          <div><span>Aircraft</span>A320</div>
+        </div>
+      </div>
     </div>
 
     <div class="section">
-      <div class="label">Total Travel Time</div>
-      <div class="value">Approximately 20 hours 35 minutes</div>
-    </div>
-
-    <div class="footer">
-      This itinerary is a fictional representation created for demonstration or presentation purposes only.
-      It does not represent a real airline booking and is not valid for travel.
+      <h2>Travel Summary</h2>
+      <div class="summary">
+        <div class="pill">
+          <div class="label">Connections</div>
+          <div class="value">Amsterdam • Istanbul</div>
+        </div>
+        <div class="pill">
+          <div class="label">Total Travel Time</div>
+          <div class="value">≈ 20h 35m</div>
+        </div>
+      </div>
     </div>
   </div>
-
 </body>
 </html>
