@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flight Itinerary — Toronto to Almaty</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 720px;
+      margin: 40px auto;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .header {
+      background: #0b3c5d;
+      color: #ffffff;
+      padding: 20px 24px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: normal;
+    }
+    .header p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    .section {
+      padding: 20px 24px;
+      border-bottom: 1px solid #e6e6e6;
+    }
+    .section:last-child {
+      border-bottom: none;
+    }
+    .label {
+      color: #666;
+      font-size: 13px;
+    }
+    .value {
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+    .flight {
+      margin-top: 16px;
+    }
+    .flight h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: #0b3c5d;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      margin: 4px 0;
+    }
+    .footer {
+      padding: 16px 24px;
+      font-size: 12px;
+      color: #777;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>Your Flight Itinerary</h1>
+      <p>Toronto → Almaty | 29 February</p>
+    </div>
+
+    <div class="section">
+      <div class="label">Passenger Name</div>
+      <div class="value">Daniil Khil</div>
+
+      <div class="label">Travel Class</div>
+      <div class="value">Economy</div>
+
+      <div class="label">Itinerary Status</div>
+      <div class="value">Scheduled</div>
+    </div>
+
+    <div class="section flight">
+      <h3>Flight 1</h3>
+      <div class="row"><span>Route</span><span>Toronto (YYZ) → Amsterdam (AMS)</span></div>
+      <div class="row"><span>Departure</span><span>05:05</span></div>
+      <div class="row"><span>Arrival</span><span>18:20</span></div>
+      <div class="row"><span>Flight Time</span><span>7h 15m</span></div>
+      <div class="row"><span>Layover</span><span>2h 10m</span></div>
+    </div>
+
+    <div class="section flight">
+      <h3>Flight 2</h3>
+      <div class="row"><span>Route</span><span>Amsterdam (AMS) → Istanbul (IST)</span></div>
+      <div class="row"><span>Departure</span><span>20:30</span></div>
+      <div class="row"><span>Arrival</span><span>01:55 (+1 day)</span></div>
+      <div class="row"><span>Flight Time</span><span>3h 25m</span></div>
+      <div class="row"><span>Layover</span><span>3h 05m</span></div>
+    </div>
+
+    <div class="section flight">
+      <h3>Flight 3</h3>
+      <div class="row"><span>Route</span><span>Istanbul (IST) → Almaty (ALA)</span></div>
+      <div class="row"><span>Departure</span><span>05:00</span></div>
+      <div class="row"><span>Arrival</span><span>13:40</span></div>
+      <div class="row"><span>Flight Time</span><span>4h 40m</span></div>
+    </div>
+
+    <div class="section">
+      <div class="label">Total Travel Time</div>
+      <div class="value">Approximately 20 hours 35 minutes</div>
+    </div>
+
+    <div class="footer">
+      This itinerary is a fictional representation created for demonstration or presentation purposes only.
+      It does not represent a real airline booking and is not valid for travel.
+    </div>
+  </div>
+
+</body>
+</html>
